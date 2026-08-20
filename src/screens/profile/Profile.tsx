@@ -144,7 +144,12 @@ function Profile() {
                       />
                     )}
                     {errors.firstName && (
-                      <FieldDescription>{errors.firstName}</FieldDescription>
+                      <FieldDescription>
+                        {" "}
+                        {typeof errors.firstName === "string"
+                          ? errors.firstName
+                          : String(errors.firstName)}
+                      </FieldDescription>
                     )}
                   </div>
                   <div className="flex flex-col">
@@ -161,7 +166,11 @@ function Profile() {
                       />
                     )}
                     {errors.lastName && (
-                      <FieldDescription>{errors.lastName}</FieldDescription>
+                      <FieldDescription>
+                        {typeof errors.lastName === "string"
+                          ? errors.lastName
+                          : String(errors.lastName)}
+                      </FieldDescription>
                     )}
                   </div>
                 </div>
@@ -180,7 +189,12 @@ function Profile() {
                       />
                     )}
                     {errors.email && (
-                      <FieldDescription>{errors.email}</FieldDescription>
+                      <FieldDescription>
+                        {" "}
+                        {typeof errors.email === "string"
+                          ? errors.email
+                          : String(errors.email)}
+                      </FieldDescription>
                     )}
                   </div>
                 </div>
