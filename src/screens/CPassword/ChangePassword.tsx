@@ -38,8 +38,7 @@ export const ChangePassword = () => {
     try {
       setIsLoading(true)
       Navigate("/login")
-      const response = await axios.patch(url, values)
-      console.log(response)
+      await axios.patch(url, values)
       resetForm()
     } catch (error) {
       if (axios.isAxiosError(error)) {
